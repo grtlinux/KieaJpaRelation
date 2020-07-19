@@ -18,7 +18,8 @@ spring:
   
   datasource:
     hikari:
-      jdbc-url: jdbc:h2:tcp://localhost/~/.h2/db/testdb
+      #jdbc-url: jdbc:h2:tcp://localhost/~/.h2/db/kangdb
+      jdbc-url: jdbc:h2:tcp://localhost:9092/kangdb
       driver-class-name: org.h2.Driver
       username: sa
       password:
