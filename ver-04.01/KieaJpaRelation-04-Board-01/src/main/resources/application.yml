@@ -100,7 +100,7 @@ spring:
 #     %n : 줄바꿈(new line)
 #     %% : %를 출력
 #     %r : 애플리케이션 시작 이후부터 로깅이 발생한 시점까지의 시간(ms)
-# 
+#
 #########################################################
 logging:
   # config: classpath:logback-spring.xml
@@ -119,6 +119,7 @@ logging:
     console: "%clr(%d{HH:mm:ss}){magenta} %p - %msg%n"
     # console: "%black(%d{ISO8601}) %highlight(%-5level) %p [%blue(%t{15})] %yellow(%C{1.}) - %msg%n%throwable"
     # console: "%black(%d{ISO8601}) %highlight(%-5level) %p ${PID:-} [%blue(%15.15t{15})] [%yellow(%30.30C{1.} #%-4.4L)] - %msg%n%throwable"
+    # console: "%clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"
     file: "%d %-5level [%-10.10thread] [%-30.30logger{29}] - %msg%n"
     
   level:
