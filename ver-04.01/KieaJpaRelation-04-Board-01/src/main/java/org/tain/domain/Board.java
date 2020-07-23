@@ -66,7 +66,7 @@ public class Board {
 	
 	//@JsonIgnore
 	//@JsonProperty(access = Access.WRITE_ONLY)
-	//@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+	//@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "Asia/Seoul")
 	@Column(name = "create_date")
 	@CreationTimestamp
 	private LocalDateTime createdDate;
