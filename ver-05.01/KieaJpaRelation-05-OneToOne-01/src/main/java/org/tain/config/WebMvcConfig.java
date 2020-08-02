@@ -1,10 +1,9 @@
 package org.tain.config;
 
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-
 //@Configuration
 //@EnableWebMvc
-public class WebMvcConfig extends WebMvcConfigurerAdapter {
+public class WebMvcConfig {
+//public class WebMvcConfig extends WebMvcConfigurerAdapter {
 	/*
 	 * Browser JSON Pretty Printing
 	 */
