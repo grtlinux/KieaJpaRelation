@@ -14,9 +14,14 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class WifeController {
 
+	// http://localhost:8080/v0.1/api
+	// http://localhost:8080/v0.1/api/wifes
+	// http://localhost:8080/v0.1/api/husbands
+	
 	@Autowired
 	private WifeRepository wifeRepository;
 	
+	// http://localhost:8080/v0.1/findwife?firstname=Mary
 	@GetMapping(value = {"/findwife"})
 	public WifeInfo getWifeInfo(@RequestParam("firstname") String firstName) {
 		WifeInfo wifeInfo = this.wifeRepository.findWifeByFirstName(firstName);
@@ -27,6 +32,7 @@ public class WifeController {
 		return wifeInfo;
 	}
 	
+	// http://localhost:8080/v0.1/findremodelwife?firstname=Lauren
 	@GetMapping(value = {"/findremodelwife"})
 	public RemodelingWifeInfo getRemodelingWifeInfo(@RequestParam("firstname") String firstName) {
 		RemodelingWifeInfo wifeInfo = this.wifeRepository.findRemodelingWifeByFirstName(firstName);
